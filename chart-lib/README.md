@@ -8,7 +8,7 @@ ref) state of js (js 사용 통계 사이트
 진행과정
 1. 차트 라이브러리 NPM 으로 설치 (npm i chart.js --save)
 2. 설치한 라이브러리를 App.vue에 import
-3. mounted() 에서 차트를 그림.
+3. mounted() 에서 차트를 그림. (ref 속성)
 4. 차트를 컴포넌트화 
 5. 컴포넌트의 플러그인화
 6. 캄포넌트 통신을 이용한 차트 컴포넌트 기능결합
