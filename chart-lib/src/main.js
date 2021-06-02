@@ -1,7 +1,10 @@
-import { createApp } from 'vue'
+import Vue from 'vue'
 import App from './App.vue'
 import ChartPlugin from './plugins/ChartPlug.js';
 
-const app = createApp(App);
-app.use(ChartPlugin);
-app.mount('#app')
+Vue.config.productionTip = false
+Vue.use(ChartPlugin);
+
+new Vue({
+  render: h => h(App),
+}).$mount('#app')

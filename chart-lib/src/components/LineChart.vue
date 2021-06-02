@@ -1,12 +1,10 @@
 <template>
   <div>
-      <canvas id="lineChart"></canvas>
+      <canvas ref="lineChart"></canvas>
   </div>
 </template>
 
 <script>
-import Chart from 'chart.js/auto';
-
 export default {
     mounted() {
         const labels = [
@@ -32,7 +30,7 @@ export default {
                         options: {}
                         };
         
-        var myChart = new Chart( // eslint-disable-line no-unused-vars
+        var myChart = new this.$_Chart( // eslint-disable-line no-unused-vars
             this.$refs.lineChart,
             config
         );

@@ -1,17 +1,13 @@
 <template>
   <div>
-      <canvas id="barChart" width="400" height="400"></canvas>
+      <canvas ref="barChart" width="400" height="400"></canvas>
   </div>
 </template>
 
 <script>
-// chart.js 3버전이 되면서 /auto가 붙어야함.
-import Chart from 'chart.js/auto';
-
 export default {
     mounted() {
-        var ctx = document.getElementById('barChart');
-        var myChart = new Chart(ctx, { // eslint-disable-line no-unused-vars
+        var myChart = new this.$_Chart(this.$refs.barChart, { // eslint-disable-line no-unused-vars
         type: 'bar',
         data: {
             labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
